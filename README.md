@@ -8,8 +8,8 @@
 ## Содержание
 
 - [Описание](#описание)
-- [Основные библиотеки и технологии](#сновные библиотеки и технологии)
-- [Данные базы](#данные базы)
+- [Библиотеки](#библиотеки)
+- [Данные](#данные)
 - [Использование](#использование)
 - [Примеры](#примеры)
 - [Тестирование](#тестирование)
@@ -20,7 +20,7 @@
 В данном проекте была разработана мини-модель искусственного интеллекта (ИИ), предназначенная для оказания помощи сотрудникам информационной безопасности. С учетом увеличения числа киберугроз, необходимость в эффективных инструментах анализа и реагирования становится все более актуальной. Проект направлен на автоматизацию процессов анализа сетевого трафика, проверки хешей файлов, анализа файлов на наличие вредоносного кода и выполнения сетевой безопасности.
 Проект реализован на языке программирования Python, который является одним из самых популярных языков для разработки приложений в области машинного обучения и анализа данных благодаря своей простоте и мощным библиотекам.
 
-## Основные библиотеки и технологии
+## Библиотеки
 
 *	**Transformers**: библиотека от Hugging Face, используемая для работы с предобученными языковыми моделями, такими как BERT и RoBERTa. Она позволяет легко интегрировать модели для обработки естественного языка (NLP).
 
@@ -39,7 +39,7 @@
 *	**Payload_data_CICIDS2017.csv**: этот набор данных содержит информацию о сетевом трафике, включая байты полезной нагрузки, TTL (Time to Live), общую длину пакета, протокол и метку (label), указывающую на тип трафика (например, нормальный или атакующий). Данные из этого набора используются для обучения модели, которая будет классифицировать сетевой трафик и выявлять потенциальные угрозы.
 
 
-## Данные базы
+## Данные
 ![График данных базы](info/img.png)
 
 
@@ -86,8 +86,8 @@ Ensuring information security in a computer network through the use of machine l
 ## Content
 
 - [Description](#description)
-- [Basic libraries and Technologies](#new libraries and technologies)
-- [Database data](#database data)
+- [Libraries](#libraries)
+- [Database](#database)
 - [Usage](#usage)
 - [Examples](#examples)
 - [Testing](#testing)
@@ -98,7 +98,7 @@ Ensuring information security in a computer network through the use of machine l
 In this project, a mini-model of artificial intelligence (AI) was developed, designed to assist information security personnel. With the increasing number of cyber threats, the need for effective analysis and response tools is becoming increasingly urgent. The project aims to automate the processes of analyzing network traffic, checking file hashes, analyzing files for malicious code and performing network security.
 The project is implemented in the Python programming language, which is one of the most popular languages for developing applications in the field of machine learning and data analysis due to its simplicity and powerful libraries.
 
-## Basic libraries and technologies
+## Libraries
 
 * **Transformers**: A library from Hugging Face used to work with pre-trained language models such as BERT and RoBERTa. It makes it easy to integrate natural language processing (NLP) models.
 
