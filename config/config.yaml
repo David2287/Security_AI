@@ -1,0 +1,20 @@
+# Конфигурация безопасности
+security:
+  api_keys:
+    shodan: ${aofxjoyeXLlZLfhi8Ub5GzZSBZkMb7SD}
+    virustotal: ${7087802d26df295bd85105126241d3eb2ea9014a76841d06d4958d000101b13f}
+
+# Параметры логирования
+logging:
+  level: INFO
+  file: ../logs/security_ai.log
+
+# Параметры модели
+model:
+  name: "roberta-base"
+  num_labels: 15
+  generation_config:
+    top_p: 0.92
+    top_k: 50
+    temperature: 0.7
+
