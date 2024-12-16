@@ -3,7 +3,7 @@
 
 ## Цель работы:
 
-Обеспечение информационной безопасности в компьютерной сети за счет использования алгоритмов машиного обучения.
+Обеспечение информационной безопасности в компьютерной сети за счет использования алгоритмов машинного обучения.
 
 ## Содержание
 
@@ -40,8 +40,46 @@
 
 
 ## Данные
+
+### График данных базы
 ![График данных базы](info/img.png)
 
+### График оценки точности и ошибочности модели
+![График оценки точности и ошибочности модели](info/model_analysis_report.png)
+
+### График целостности данных
+![График целостности данных](info/data_integrity_check.png)
+
+### Пример обучения модели
+
+![График пример обучения модели](info/model_learn_by_data.png)
+
+```bash
+
+Epoch 1/10
+32457/32457 ━━━━━━━━━━━━━━━━━━━━ 62s 2ms/step - accuracy: 0.4981 - loss: 0.6943 - val_accuracy: 0.4982 - val_loss: 0.6932
+Epoch 2/10
+32457/32457 ━━━━━━━━━━━━━━━━━━━━ 39s 1ms/step - accuracy: 0.5002 - loss: 0.6932 - val_accuracy: 0.4982 - val_loss: 0.6932
+Epoch 3/10
+32457/32457 ━━━━━━━━━━━━━━━━━━━━ 38s 1ms/step - accuracy: 0.5003 - loss: 0.6932 - val_accuracy: 0.5018 - val_loss: 0.6931
+Epoch 4/10
+32457/32457 ━━━━━━━━━━━━━━━━━━━━ 42s 1ms/step - accuracy: 0.5012 - loss: 0.6932 - val_accuracy: 0.5018 - val_loss: 0.6931
+Epoch 5/10
+32457/32457 ━━━━━━━━━━━━━━━━━━━━ 43s 1ms/step - accuracy: 0.4992 - loss: 0.6932 - val_accuracy: 0.4982 - val_loss: 0.6932
+Epoch 6/10
+32457/32457 ━━━━━━━━━━━━━━━━━━━━ 46s 1ms/step - accuracy: 0.5011 - loss: 0.6932 - val_accuracy: 0.5018 - val_loss: 0.6932
+Epoch 7/10
+32457/32457 ━━━━━━━━━━━━━━━━━━━━ 64s 2ms/step - accuracy: 0.5002 - loss: 0.6932 - val_accuracy: 0.4982 - val_loss: 0.6931
+Epoch 8/10
+32457/32457 ━━━━━━━━━━━━━━━━━━━━ 58s 2ms/step - accuracy: 0.4994 - loss: 0.6932 - val_accuracy: 0.5018 - val_loss: 0.6931
+Epoch 9/10
+32457/32457 ━━━━━━━━━━━━━━━━━━━━ 49s 2ms/step - accuracy: 0.4995 - loss: 0.6932 - val_accuracy: 0.4982 - val_loss: 0.6932
+Epoch 10/10
+32457/32457 ━━━━━━━━━━━━━━━━━━━━ 58s 2ms/step - accuracy: 0.5003 - loss: 0.6932 - val_accuracy: 0.4982 - val_loss: 0.6932
+8115/8115 ━━━━━━━━━━━━━━━━━━━━ 8s 943us/step - accuracy: 0.4987 - loss: 0.6932
+Точность на тестовой выборке: 49.82%
+
+```
 
 ## Использование
 
@@ -73,77 +111,12 @@
 ## Установка
 
 Инструкции по установке проекта. Например:
+```bash
+git clone https://github.com/David2287/Security_AI.git
 
+pip install -r Security_AI/requirements.txt
+```
 
-
-# Security_AI(ENG)
-![Логотип проекта](ai-hub-svgrepo-com.svg)
-
-## The purpose of the work:
-
-Ensuring information security in a computer network through the use of machine learning algorithms.
-
-## Content
-
-- [Description](#description)
-- [Libraries](#libraries)
-- [Database](#database)
-- [Usage](#usage)
-- [Examples](#examples)
-- [Testing](#testing)
-- [Installation](#installation)
-
-## Description
-
-In this project, a mini-model of artificial intelligence (AI) was developed, designed to assist information security personnel. With the increasing number of cyber threats, the need for effective analysis and response tools is becoming increasingly urgent. The project aims to automate the processes of analyzing network traffic, checking file hashes, analyzing files for malicious code and performing network security.
-The project is implemented in the Python programming language, which is one of the most popular languages for developing applications in the field of machine learning and data analysis due to its simplicity and powerful libraries.
-
-## Libraries
-
-* **Transformers**: A library from Hugging Face used to work with pre-trained language models such as BERT and RoBERTa. It makes it easy to integrate natural language processing (NLP) models.
-
-* **Pandas**: a library for working with data, providing convenient data structures and tools for analysis.
-
-* **Scikit-learn**: A library for machine learning used to divide data into training and test sets, as well as for other operations related to data preparation.
-
-* **Requests**: A library for executing HTTP requests used to interact with external APIs such as VirusTotal and Shodan.
-
-* **Nmap**: A network scanning tool used to analyze open ports and services on target machines.
-
-* **Shodan**: A search engine for the Internet of Things (IoT) that allows you to find devices and their vulnerabilities.
-
-### The project uses two main data sets:
-
-* **Payload_data_CICIDS2017.csv**: This dataset contains information about network traffic, including payload bytes, TTL (Time to Live), total packet length, protocol, and a label indicating the type of traffic (for example, normal or attacking). The data from this set is used to train a model that will classify network traffic and identify potential threats.
-
-
-## Database
-![График данных базы](info/img.png)
-
-
-## Usage
-
-### Interactive mode:
-
-After launching the application, you will switch to interactive mode, where you can enter commands.
-To get help on the available commands, type help.
-Available commands:
-
-####1) question: Ask a security question.
-Enter a security-related question and get an answer from an AI security consultant.
-
-####2) file: Perform file analysis.
-Specify the path to the file, and the program will analyze it, providing results such as the presence of malicious code or vulnerabilities.
-
-####3) network: Perform network analysis.
-Enter an IP address or domain name to check the network's reputation and scan for vulnerabilities. The program will provide information about reputation and possible vulnerabilities.
-
-####4) train: Train the model based on the provided dataset.
-Specify the path to the dataset, and the program will train the model based on the provided data. This can be useful for improving security algorithms.
-(Initially, the program has a data set for training and can provide a certain type of implementation of this data set)
-
-####5) exit: Exit the application.
-
-## Testing 
-
-The program files already contain a set of tests to check the operation of classes and their functions
+```http request
+https://clck.ru/3FGWHh
+```
